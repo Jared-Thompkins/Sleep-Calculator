@@ -11,7 +11,7 @@ tomorrow_with_time = datetime(
 )
 
 import datetime
-wake_time_after_midnight = timedelta(hours=6) + timedelta(minutes=15)
+wake_time_after_midnight = timedelta(hours=6) + timedelta(minutes=00)
 tomorrow_wake_time = tomorrow_with_time + wake_time_after_midnight
 current_time = datetime.datetime.now()
 
@@ -36,4 +36,10 @@ print("Time left to make Bedtimes")
 print("For 6 cycles, fall asleep in:", time_left_before_six_cycle)
 print("For 5 cycles, fall asleep in:", time_left_before_five_cycle)
 print("For 4 cycles, fall asleep in:", time_left_before_four_cycle)
+
+
+def function(wake_time):
+    return wake_time - timedelta(hours=9)
+
+print(function(timedelta(hours=6)))
 
